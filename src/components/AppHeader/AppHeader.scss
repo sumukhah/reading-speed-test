@@ -1,0 +1,31 @@
+@import "../../../constants/colors.scss";
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 150px;
+  height: 70px;
+  background-color: $primary_background_color;
+
+  .button {
+    color: $primary_color;
+    span {
+      font-size: larger;
+      font-weight: 500;
+    }
+  }
+
+  .app-logo {
+    color: $primary_color;
+    font-weight: 700;
+    font-size: larger;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .header-container {
+    margin: 0;
+    padding: 0;
+  }
+}
