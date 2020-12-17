@@ -1,0 +1,25 @@
+"https://github.com/public-apis/public-apis";
+
+"https://newsapi.org/docs/endpoints";
+"https://developer.nytimes.com/docs/";
+
+Bible: "https://devotionalium.com/";
+Quran: "https://devotionalium.com/";
+BhagavathGeetha: "https://bhagavadgita.io/";
+Movies: "http://www.omdbapi.com/#usage";
+
+[
+  random,
+  news,
+  articles,
+  technology,
+  science,
+  sports,
+  stories,
+  biography,
+  history,
+  movies,
+  bible,
+  quaran,
+  BhagavathGeetha,
+];

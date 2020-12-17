@@ -1,0 +1,19 @@
+.read-box-container {
+  display: flex;
+  align-self: stretch;
+  border: 3px solid #292929;
+  margin: 50px;
+  height: 600px;
+  width: 800px;
+  border-radius: 40px;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .read-box-container {
+    width: 95%;
+    margin: 10px;
+    // padding-inline: 10px;
+  }
+}

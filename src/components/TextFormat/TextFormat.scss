@@ -1,0 +1,21 @@
+.text-format-form {
+  // background-color: gray;
+  height: 70px;
+  width: 100%;
+  border-radius: 40px 40px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 50px;
+
+  .font-select-dropdown {
+    width: 100px;
+  }
+  .topic-select-dropdown {
+    width: 150px;
+  }
+  .font-size {
+    width: 70px;
+  }
+}

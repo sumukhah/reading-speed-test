@@ -7,7 +7,12 @@
   align-items: center;
   padding-inline: 150px;
   height: 70px;
-  background-color: $primary_background_color;
+  background-image: linear-gradient(
+    to left,
+    #007e7e,
+    $primary_background_color,
+    #029191
+  );
 
   .button {
     color: $primary_color;
@@ -26,6 +31,6 @@
 @media only screen and (max-width: 600px) {
   .header-container {
     margin: 0;
-    padding: 0;
+    padding: 0px;
   }
 }
