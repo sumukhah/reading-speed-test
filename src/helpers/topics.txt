@@ -23,3 +23,7 @@ Movies: "http://www.omdbapi.com/#usage";
   quaran,
   BhagavathGeetha,
 ];
+
+// news api token => 8796261ba5d64b0bbce91f3efa004bf5
+
+wikipedia => https://en.wikipedia.org/w/api.php?action=query&format=json&titles=Pet_door&prop=extracts&exintro&explaintext

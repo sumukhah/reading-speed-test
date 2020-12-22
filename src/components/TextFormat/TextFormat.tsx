@@ -5,21 +5,45 @@ import { FullscreenOutlined, BoldOutlined } from "@ant-design/icons";
 import "./TextFormat.scss";
 const { Option } = Select;
 
-export default function TextFormat() {
+interface TextFormatProps {
+  setFontFamily: (font: string) => void;
+  setFontSize: (size: number) => void;
+  setTopic: (topic: string) => void;
+  setIsBold: () => void;
+  setIsFullScreen: () => void;
+  defaultTopic: string;
+  defaultSize: number;
+  defaultFontFamily: string;
+}
+
+const TextFormat: React.FC<TextFormatProps> = (props) => {
   return (
     <div className="text-format-form">
       <div>
-        <Select defaultValue="Ariel" className="font-select-dropdown">
-          <Option value="ariel">Ariel</Option>
-          <Option value="roboto">Roboto</Option>
+        <Select
+          defaultValue={props.defaultFontFamily}
+          className="font-select-dropdown"
+          onChange={(value) => props.setFontFamily(value)}
+        >
+          <Option value="Arial">Arial</Option>
+          <Option value="Geneva">Geneva</Option>
+          <Option value="Times New Roman">Times New Roman</Option>
+          <Option value="Verdana">Verdana</Option>
         </Select>
         <InputNumber
           min={10}
           max={30}
-          defaultValue={20}
+          defaultValue={props.defaultSize}
           className="font-size"
+          onChange={(value) => {
+            props.setFontSize(value as number);
+          }}
         />
-        <Select defaultValue="Random" className="topic-select-dropdown">
+        <Select
+          defaultValue={props.defaultTopic}
+          className="topic-select-dropdown"
+          onChange={(val) => props.setTopic(val)}
+        >
           <Option value="Random">Random</Option>
           <Option value="Articles">Articles</Option>
           <Option value="News">News</Option>
@@ -34,13 +58,12 @@ export default function TextFormat() {
         <Tooltip title="Bold">
           <Button
             // style={{ fontWeight: "bold" }}
-            icon={<BoldOutlined />}
+            icon={<BoldOutlined onClick={props.setIsBold} />}
           />
-        </Tooltip>
-        <Tooltip title="Full Screen">
-          <Button icon={<FullscreenOutlined />} />
         </Tooltip>
       </div>
     </div>
   );
-}
+};
+
+export default TextFormat;
