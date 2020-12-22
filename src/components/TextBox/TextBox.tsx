@@ -16,11 +16,7 @@ const TextBox: React.FC<TextBoxProps> = ({ fontStyle, toggleFullScreen }) => {
     <div className="text-box">
       <TextArea
         placeholder="Add your own Text or select a Topic and press Start"
-        style={{
-          fontFamily: fontStyle.fontFamily,
-          fontSize: fontStyle.fontSize,
-          fontWeight: fontStyle.isBold ? "bold" : "normal",
-        }}
+        style={fontStyle}
       />
       <Button type="primary" className="read-start-button" size="large">
         Start Test
