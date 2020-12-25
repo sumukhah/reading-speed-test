@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Speed-Read/static/css/main.6c44a895.chunk.css",
+    "main.js": "/Speed-Read/static/js/main.95a36046.chunk.js",
+    "main.js.map": "/Speed-Read/static/js/main.95a36046.chunk.js.map",
+    "runtime-main.js": "/Speed-Read/static/js/runtime-main.287fc245.js",
+    "runtime-main.js.map": "/Speed-Read/static/js/runtime-main.287fc245.js.map",
+    "static/css/2.b00201c5.chunk.css": "/Speed-Read/static/css/2.b00201c5.chunk.css",
+    "static/js/2.aaadd2ec.chunk.js": "/Speed-Read/static/js/2.aaadd2ec.chunk.js",
+    "static/js/2.aaadd2ec.chunk.js.map": "/Speed-Read/static/js/2.aaadd2ec.chunk.js.map",
+    "static/js/3.8c8c825c.chunk.js": "/Speed-Read/static/js/3.8c8c825c.chunk.js",
+    "static/js/3.8c8c825c.chunk.js.map": "/Speed-Read/static/js/3.8c8c825c.chunk.js.map",
+    "index.html": "/Speed-Read/index.html",
+    "static/css/2.b00201c5.chunk.css.map": "/Speed-Read/static/css/2.b00201c5.chunk.css.map",
+    "static/css/main.6c44a895.chunk.css.map": "/Speed-Read/static/css/main.6c44a895.chunk.css.map",
+    "static/js/2.aaadd2ec.chunk.js.LICENSE.txt": "/Speed-Read/static/js/2.aaadd2ec.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.287fc245.js",
+    "static/css/2.b00201c5.chunk.css",
+    "static/js/2.aaadd2ec.chunk.js",
+    "static/css/main.6c44a895.chunk.css",
+    "static/js/main.95a36046.chunk.js"
+  ]
+}
