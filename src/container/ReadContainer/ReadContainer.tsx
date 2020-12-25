@@ -1,23 +1,33 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useContext } from "react";
 import { message } from "antd";
+import axios from "axios";
+import wpmContext from "../../context/wpmContext";
+import { availableTopics } from "../../helpers/index";
+import { useHistory } from "react-router-dom";
 
 import "./ReadContainer.scss";
-
 import { textStyle } from "../../helpers/types";
 import TextBox from "../../components/TextBox/TextBox";
 import TextFormat from "../../components/TextFormat/TextFormat";
+import Timer from "../../components/Timer/Timer";
+
+const INITIAL_TEXT_FORMAT: textStyle = {
+  fontFamily: "arial",
+  fontWeight: "normal",
+  fontSize: 15,
+};
 
 export default function ReadContainer() {
+  const { setWpm } = useContext(wpmContext);
+  const history = useHistory();
   // const [fontSize, setFontSize] = useState(15);
   // const [fontFamily, setFontFamily] = useState("arial");
-  const [topic, setTopic] = useState("Random");
+  const [topic, setTopic] = useState<string>("random");
   // const [isBold, setIsBold] = useState(false);
-  const [textFormat, setTextFormat] = useState<textStyle>({
-    fontFamily: "arial",
-    fontWeight: "normal",
-    fontSize: 15,
-  });
+  const [textContent, setTextContent] = useState<string>("");
+  const [textFormat, setTextFormat] = useState<textStyle>(INITIAL_TEXT_FORMAT);
   const textBoxRef = useRef<HTMLDivElement | null>(null);
+  const [readingMode, setReadingMode] = useState<boolean>(false);
 
   const toggleFullScreen = (): void => {
     if (document.fullscreenEnabled) {
@@ -48,6 +58,49 @@ export default function ReadContainer() {
     setTextFormat({ ...textFormat, fontSize: size });
   };
 
+  const getTextContent = async () => {
+    if (textContent.trim().length > 0) {
+      if (textContent.split(" ").length < 60) {
+        message.error("You must insert at least 60 words");
+        return;
+      }
+      setReadingMode(true);
+    } else {
+      const url = availableTopics[topic];
+      try {
+        const response = await axios.get(url.api);
+        const data = response.data.body;
+        const randomArticle: string =
+          data[Math.floor(Math.random() * data.length)].content;
+        setTextContent(randomArticle);
+        setReadingMode(true);
+      } catch (e) {
+        console.log(e);
+        message.error(e.message);
+      }
+    }
+  };
+
+  const toggleReadingMode = () => {
+    if (!readingMode) {
+      getTextContent();
+    } else {
+      setReadingMode((readingMode) => !readingMode);
+    }
+    // setReadingMode(!readingMode);
+  };
+
+  const onTextContentChange = (value: string): void => {
+    setTextContent(value);
+  };
+
+  const calculateWpm = (seconds: number): void => {
+    const words: number = textContent.split(" ").length;
+    const wpm: number = (60 * words) / seconds;
+    setWpm(Math.floor(wpm));
+    history.push("/stats");
+  };
+
   return (
     <div className="read-box-container">
       <TextFormat
@@ -61,7 +114,15 @@ export default function ReadContainer() {
         defaultFontFamily={textFormat.fontFamily}
       />
       <div ref={textBoxRef} className="text-box-ref">
-        <TextBox fontStyle={textFormat} toggleFullScreen={toggleFullScreen} />
+        <TextBox
+          fontStyle={textFormat}
+          toggleFullScreen={toggleFullScreen}
+          toggleReadingMode={toggleReadingMode}
+          onTextContentChange={onTextContentChange}
+          value={textContent}
+          readingMode={readingMode}
+        />
+        <Timer calculateWpm={calculateWpm} readingMode={readingMode} />
       </div>
     </div>
   );

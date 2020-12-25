@@ -1,6 +1,8 @@
 import React from "react";
 import { Select, Tooltip, Button, InputNumber } from "antd";
 import { BoldOutlined } from "@ant-design/icons";
+import { availableTopics, availableFontFamily } from "../../helpers";
+import S from "string";
 
 import "./TextFormat.scss";
 const { Option } = Select;
@@ -25,10 +27,13 @@ const TextFormat: React.FC<TextFormatProps> = (props) => {
           className="font-select-dropdown"
           onChange={(value) => props.setFontFamily(value)}
         >
-          <Option value="Arial">Arial</Option>
-          <Option value="Geneva">Geneva</Option>
-          <Option value="Times New Roman">Times New Roman</Option>
-          <Option value="Verdana">Verdana</Option>
+          {availableFontFamily.map((family) => {
+            return (
+              <Option value={family} key={family}>
+                {S(family).humanize().s}
+              </Option>
+            );
+          })}
         </Select>
         <InputNumber
           min={10}
@@ -44,9 +49,16 @@ const TextFormat: React.FC<TextFormatProps> = (props) => {
           className="topic-select-dropdown"
           onChange={(val) => props.setTopic(val)}
         >
-          <Option value="Random">Random</Option>
+          {Object.keys(availableTopics).map((topic) => {
+            return (
+              <Option value={topic} key={topic}>
+                {S(topic).humanize().s}
+              </Option>
+            );
+          })}
+          {/* <Option value="Random">Random</Option>
           <Option value="Articles">Articles</Option>
-          {/* <Option value="News">News</Option>
+          <Option value="News">News</Option>
           <Option value="Technology">Technology</Option>
           <Option value="Sports">Sports</Option>
           <Option value="Bible">Bible</Option>
@@ -57,8 +69,9 @@ const TextFormat: React.FC<TextFormatProps> = (props) => {
       <div>
         <Tooltip title="Bold">
           <Button
+            onClick={props.setIsBold}
             // style={{ fontWeight: "bold" }}
-            icon={<BoldOutlined onClick={props.setIsBold} />}
+            icon={<BoldOutlined />}
           />
         </Tooltip>
       </div>

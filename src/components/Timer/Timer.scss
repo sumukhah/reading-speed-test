@@ -1,0 +1,12 @@
+@import "../../../constants/colors.scss";
+
+.timer-container {
+  // background-color: white;
+  color: $primary_background_color;
+  align-items: center;
+  text-align: center;
+  font-weight: bolder;
+  width: 10%;
+  font-size: larger;
+  // color: $primary_background_color;
+}

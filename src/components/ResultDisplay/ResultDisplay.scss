@@ -1,0 +1,30 @@
+@import "../../../constants/colors.scss";
+
+.result-display-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+
+  .result-card {
+    width: 300px;
+    h1,
+    h2 {
+      color: #1890ff;
+    }
+  }
+
+  .progress-display {
+    display: flex;
+    flex-flow: column-reverse;
+    align-items: center;
+  }
+
+  .read-again-button {
+    background-color: $primary_background_color;
+    border: 0;
+    font-weight: bolder;
+  }
+}

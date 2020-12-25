@@ -1,6 +1,9 @@
-.app-body {
-  // padding-inline: 150px;
+.App {
+  .app-body {
+    // min-height: 95vh;
+  }
   min-height: 90vh;
+  // padding-inline: 150px;
 }
 // @media only screen and (max-width: 600px) {
 //   .app-body {

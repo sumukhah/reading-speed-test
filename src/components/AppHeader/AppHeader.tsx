@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "antd";
 
 import "./AppHeader.scss";
+import { Link } from "react-router-dom";
 
 const AppHeader = () => {
   return (
@@ -9,13 +10,10 @@ const AppHeader = () => {
       <div className="app-logo">App Logo</div>
       <div>
         <Button className="button" type="link">
-          Guide
+          <Link to="/">Home</Link>
         </Button>
         <Button className="button" type="link">
-          Statistics
-        </Button>
-        <Button className="button" type="link">
-          About Us
+          <Link to="/stats">Statistics</Link>
         </Button>
       </div>
     </div>
