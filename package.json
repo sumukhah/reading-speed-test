@@ -1,4 +1,5 @@
 {
+  "homepage": "http://sumukhah.github.io/Speed-Read",
   "name": "speed-read",
   "version": "0.1.0",
   "private": true,
@@ -27,7 +28,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -50,6 +53,7 @@
   "devDependencies": {
     "@types/fscreen": "^1.0.1",
     "@types/react-router-dom": "^5.1.6",
-    "@types/string": "0.0.30"
+    "@types/string": "0.0.30",
+    "gh-pages": "^3.1.0"
   }
 }
