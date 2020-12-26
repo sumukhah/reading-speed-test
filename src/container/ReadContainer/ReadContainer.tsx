@@ -20,10 +20,7 @@ const INITIAL_TEXT_FORMAT: textStyle = {
 export default function ReadContainer() {
   const { setWpm } = useContext(wpmContext);
   const history = useHistory();
-  // const [fontSize, setFontSize] = useState(15);
-  // const [fontFamily, setFontFamily] = useState("arial");
   const [topic, setTopic] = useState<string>("random");
-  // const [isBold, setIsBold] = useState(false);
   const [textContent, setTextContent] = useState<string>("");
   const [textFormat, setTextFormat] = useState<textStyle>(INITIAL_TEXT_FORMAT);
   const textBoxRef = useRef<HTMLDivElement | null>(null);
@@ -75,7 +72,6 @@ export default function ReadContainer() {
         setTextContent(randomArticle);
         setReadingMode(true);
       } catch (e) {
-        console.log(e);
         message.error(e.message);
       }
     }
@@ -98,7 +94,7 @@ export default function ReadContainer() {
     const words: number = textContent.split(" ").length;
     const wpm: number = (60 * words) / seconds;
     setWpm(Math.floor(wpm));
-    history.push("/stats");
+    history.push("stats");
   };
 
   return (

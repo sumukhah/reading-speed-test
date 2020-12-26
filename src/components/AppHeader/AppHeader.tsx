@@ -7,13 +7,17 @@ import { Link } from "react-router-dom";
 const AppHeader = () => {
   return (
     <div className="header-container">
-      <div className="app-logo">App Logo</div>
+      <div className="app-logo">
+        <Button className="button" type="link">
+          <Link to="/">App Logo</Link>
+        </Button>
+      </div>
       <div>
         <Button className="button" type="link">
           <Link to="/">Home</Link>
         </Button>
         <Button className="button" type="link">
-          <Link to="/stats">Statistics</Link>
+          <Link to="stats">Statistics</Link>
         </Button>
       </div>
     </div>

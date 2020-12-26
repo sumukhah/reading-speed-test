@@ -9,6 +9,7 @@ import AppIntro from "./components/AppIntroduction/AppIntroduction";
 import ReadContainer from "./container/ReadContainer/ReadContainer";
 import StatisticsContainer from "./container/StatisticsContainer/StatisticsContainer";
 import wpmContext from "./context/wpmContext";
+import AdblockDetect from "./components/AdblockDetect/AdblockDetect";
 import VerticalBannerAd from "./components/VerticalBannerAds/VerticalBannerAds";
 import SquareBannerAd from "./components/SquareBannerAd/SquareBannerAd";
 import "./App.scss";
@@ -19,6 +20,7 @@ function App() {
   return (
     <Router>
       <AppHeader />
+      <AdblockDetect />
       <wpmContext.Provider value={{ wpm, setWpm }}>
         <Switch>
           <Route path="/stats">
