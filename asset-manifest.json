@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.9ccf25cd.chunk.css",
-    "main.js": "/static/js/main.35ee07e4.chunk.js",
-    "main.js.map": "/static/js/main.35ee07e4.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.4c23191b.js",
-    "runtime-main.js.map": "/static/js/runtime-main.4c23191b.js.map",
-    "static/css/2.b00201c5.chunk.css": "/static/css/2.b00201c5.chunk.css",
-    "static/js/2.9b3bb961.chunk.js": "/static/js/2.9b3bb961.chunk.js",
-    "static/js/2.9b3bb961.chunk.js.map": "/static/js/2.9b3bb961.chunk.js.map",
-    "static/js/3.02f7f4c5.chunk.js": "/static/js/3.02f7f4c5.chunk.js",
-    "static/js/3.02f7f4c5.chunk.js.map": "/static/js/3.02f7f4c5.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.b00201c5.chunk.css.map": "/static/css/2.b00201c5.chunk.css.map",
-    "static/css/main.9ccf25cd.chunk.css.map": "/static/css/main.9ccf25cd.chunk.css.map",
-    "static/js/2.9b3bb961.chunk.js.LICENSE.txt": "/static/js/2.9b3bb961.chunk.js.LICENSE.txt"
+    "main.css": "/Speed-Read/static/css/main.9ccf25cd.chunk.css",
+    "main.js": "/Speed-Read/static/js/main.35ee07e4.chunk.js",
+    "main.js.map": "/Speed-Read/static/js/main.35ee07e4.chunk.js.map",
+    "runtime-main.js": "/Speed-Read/static/js/runtime-main.b7025ff2.js",
+    "runtime-main.js.map": "/Speed-Read/static/js/runtime-main.b7025ff2.js.map",
+    "static/css/2.b00201c5.chunk.css": "/Speed-Read/static/css/2.b00201c5.chunk.css",
+    "static/js/2.fca642da.chunk.js": "/Speed-Read/static/js/2.fca642da.chunk.js",
+    "static/js/2.fca642da.chunk.js.map": "/Speed-Read/static/js/2.fca642da.chunk.js.map",
+    "static/js/3.02f7f4c5.chunk.js": "/Speed-Read/static/js/3.02f7f4c5.chunk.js",
+    "static/js/3.02f7f4c5.chunk.js.map": "/Speed-Read/static/js/3.02f7f4c5.chunk.js.map",
+    "index.html": "/Speed-Read/index.html",
+    "static/css/2.b00201c5.chunk.css.map": "/Speed-Read/static/css/2.b00201c5.chunk.css.map",
+    "static/css/main.9ccf25cd.chunk.css.map": "/Speed-Read/static/css/main.9ccf25cd.chunk.css.map",
+    "static/js/2.fca642da.chunk.js.LICENSE.txt": "/Speed-Read/static/js/2.fca642da.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.4c23191b.js",
+    "static/js/runtime-main.b7025ff2.js",
     "static/css/2.b00201c5.chunk.css",
-    "static/js/2.9b3bb961.chunk.js",
+    "static/js/2.fca642da.chunk.js",
     "static/css/main.9ccf25cd.chunk.css",
     "static/js/main.35ee07e4.chunk.js"
   ]
