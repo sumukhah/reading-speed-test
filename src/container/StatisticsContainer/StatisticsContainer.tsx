@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
-import { Card, Typography } from "antd";
-import { ROOT } from "../../helpers/index";
+import Helmet from "react-helmet";
 import "./StatisticsContainer.scss";
 import ReadMeasurementTable from "../../components/ReadMeasurementTable/ReadMeasurementTable";
 import ResultDisplay from "../../components/ResultDisplay/ResultDisplay";
@@ -33,6 +32,17 @@ export default function StatisticsContainer() {
   };
   return (
     <div className="statistics-container">
+      <Helmet>
+        <title>Speed Reading Test and Reading Comprehension Test</title>
+        <meta
+          name="description"
+          content="Free speed reading online test.Check your reading speed and test your
+          Comprehension.Check your average reading speed. learn to speed read
+          .The average wpm is 150 to 200 wpm.reading wpm test.words per minute
+          reading test.reading wpm test.Check your average reading speed.train
+          yourself with speed reading exercises"
+        />
+      </Helmet>
       <div>
         {wpm > 10 && (
           <ResultDisplay

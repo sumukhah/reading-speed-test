@@ -15,12 +15,18 @@
     #029191
   );
 
+  h2,
+  a {
+    color: white;
+    font-size: large;
+  }
+
   .button {
     color: $primary_color;
-    a {
-      font-size: larger;
-      font-weight: 500;
-    }
+    // a {
+    //   font-size: larger;
+    //   font-weight: 500;
+    // }
   }
 
   .app-logo {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "antd/dist/antd.css";
 import { Row, Col } from "antd";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import AppHeader from "./components/AppHeader/AppHeader";
 import Footer from "./components/Footer/Footer";
@@ -13,9 +13,14 @@ import AdblockDetect from "./components/AdblockDetect/AdblockDetect";
 import VerticalBannerAd from "./components/VerticalBannerAds/VerticalBannerAds";
 import SquareBannerAd from "./components/SquareBannerAd/SquareBannerAd";
 import "./App.scss";
+import ReactGA from "react-ga";
 
 function App() {
   const [wpm, setWpm] = useState<number>(0);
+  useEffect(() => {
+    ReactGA.initialize("UA-186125804-1");
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <Router>

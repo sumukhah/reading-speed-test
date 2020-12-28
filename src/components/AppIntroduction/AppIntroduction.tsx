@@ -1,19 +1,17 @@
 import React from "react";
 import { Typography } from "antd";
 import "./AppIntroduction.scss";
-const { Title } = Typography;
 
 export default function AppIntroduction() {
   return (
     <div className="app-intro-container">
-      <Title level={3}>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi iure sed
-        at veniam ad.
-      </Title>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quos!
-        Perspiciatis quis ex velit minima, vero at tempore, aspernatur error
-        quidem accusantium commodi sit hic alias, eum delectus placeat nostrum.
+      <h1>Pick up a topic and check your Reading Speed for free.</h1>
+      <p className="intro-p">
+        Speed reading is the process of rapidly absorbing the meaning of a
+        sentence, rather than identifying individual words. Reading Speed became
+        so much important to gain knowledge in the current world. You will have
+        an advantage over others to gain contextual knowledge with less time
+        than others.
       </p>
     </div>
   );

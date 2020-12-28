@@ -20,6 +20,7 @@ export default function Ads() {
         data-ad-slot="7149145943"
         data-ad-format="auto"
         data-full-width-responsive="true"
+        // data-adtest="on"
       ></ins>
     </div>
   );

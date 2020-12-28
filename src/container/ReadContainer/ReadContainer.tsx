@@ -4,6 +4,7 @@ import axios from "axios";
 import wpmContext from "../../context/wpmContext";
 import { availableTopics } from "../../helpers/index";
 import { useHistory } from "react-router-dom";
+import Helmet from "react-helmet";
 
 import "./ReadContainer.scss";
 import { textStyle } from "../../helpers/types";
@@ -94,11 +95,20 @@ export default function ReadContainer() {
     const words: number = textContent.split(" ").length;
     const wpm: number = (60 * words) / seconds;
     setWpm(Math.floor(wpm));
-    history.push("stats");
+    history.push("/stats");
   };
 
   return (
     <div className="read-box-container">
+      <Helmet>
+        <title>Test your reading speed</title>
+        <meta
+          name="description"
+          content="Free online tool to check your reading ability. Reading speed is
+          proportional to Comprehension at certain level. Check speed reading
+          wpm.Check your average reading speed."
+        />
+      </Helmet>
       <TextFormat
         setFontSize={setFontSize}
         setFontFamily={setFontFamily}
