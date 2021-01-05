@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "antd/dist/antd.css";
 import { Row, Col } from "antd";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import ReactGA from "react-ga";
 
 import AppHeader from "./components/AppHeader/AppHeader";
 import Footer from "./components/Footer/Footer";
@@ -12,8 +13,9 @@ import wpmContext from "./context/wpmContext";
 import AdblockDetect from "./components/AdblockDetect/AdblockDetect";
 import VerticalBannerAd from "./components/VerticalBannerAds/VerticalBannerAds";
 import SquareBannerAd from "./components/SquareBannerAd/SquareBannerAd";
+import GuideContainer from "./container/GuideContainer/GuideContainer";
+import AppIntroTextBottom from "./components/AppIntroTextBottom/AppIntroTextBottom";
 import "./App.scss";
-import ReactGA from "react-ga";
 
 function App() {
   const [wpm, setWpm] = useState<number>(0);
@@ -33,9 +35,15 @@ function App() {
               <StatisticsContainer />
             </AppBody>
           </Route>
+          <Route path="/guide">
+            <AppBody>
+              <GuideContainer />
+            </AppBody>
+          </Route>
           <Route path="/">
             <AppBody>
               <AppIntro />
+              <AppIntroTextBottom />
               <ReadContainer />
             </AppBody>
           </Route>
@@ -58,6 +66,14 @@ const AppBody = (props: { children: JSX.Element[] | JSX.Element }) => {
         </Col>
         <Col flex={2} style={{ minHeight: "90vh" }}>
           <VerticalBannerAd />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <SquareBannerAd />
+        </Col>
+        <Col>
+          <SquareBannerAd />
         </Col>
       </Row>
     </div>

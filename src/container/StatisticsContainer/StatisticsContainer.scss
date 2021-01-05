@@ -2,4 +2,19 @@
 
 .statistics-container {
   padding: 20px;
+  h2,
+  h1,
+  p {
+    font-family: serif;
+  }
+
+  .benefits-container {
+    margin-top: 30px;
+
+    .ant-card {
+      background-color: whitesmoke;
+      margin-top: 5px;
+      border-radius: 2%;
+    }
+  }
 }

@@ -21,12 +21,14 @@
     font-size: large;
   }
 
-  .button {
-    color: $primary_color;
-    // a {
-    //   font-size: larger;
-    //   font-weight: 500;
-    // }
+  .navs-href {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    a {
+      margin: 0 10px 0 10px;
+      font-weight: 450;
+    }
   }
 
   .app-logo {

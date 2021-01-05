@@ -10,21 +10,14 @@ const AppHeader = () => {
       <div className="app-logo">
         <Button className="button" type="link">
           <h2>
-            <Link to="/">App Logo</Link>
+            <Link to="/">Reading speed test</Link>
           </h2>
         </Button>
       </div>
-      <div>
-        <Button className="button" type="link">
-          <h2>
-            <Link to="/">Home</Link>
-          </h2>
-        </Button>
-        <Button className="button" type="link">
-          <h2>
-            <Link to="/stats">Statistics</Link>
-          </h2>
-        </Button>
+      <div className="navs-href">
+        <Link to="/">Home</Link>
+        <Link to="/stats">Statistics</Link>
+        <Link to="/guide">Guide</Link>
       </div>
     </div>
   );
