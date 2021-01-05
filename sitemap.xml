@@ -4,9 +4,9 @@
     <loc>https://readingspeedtest.tech/</loc>
   </url>
   <url>
-    <loc>https://readingspeedtest.tech/stats</loc>
+    <loc>https://readingspeedtest.tech/#/stats</loc>
   </url>
   <url>
-    <loc>https://readingspeedtest.tech/guide</loc>
+    <loc>https://readingspeedtest.tech/#/guide</loc>
   </url>
 </urlset>
